@@ -1,4 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
+
+import { faEdit, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-property-card',
@@ -8,11 +11,10 @@ import { Component } from "@angular/core";
 
 )
 export class PropertyCardComponent {
-  Property: any = {
-    "Id": 1,
-    "Name": "Brila House",
-    "Type": "House",
-    "Price": 120000,
 
-  }
+@Input() property : any
+
+  faEdit = faEdit;
+  faAddressBook = faAddressBook;
+
 }
