@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IProperty } from '../property/IProperty.interface';
 import { HousingService } from '../services/housing.service';
 
 
@@ -9,7 +10,8 @@ import { HousingService } from '../services/housing.service';
 })
 export class PropertyListComponent implements OnInit {
 
-  properties: any;
+  properties: Array<IProperty>;
+
   constructor(
     private housingService: HousingService
    ) { }
